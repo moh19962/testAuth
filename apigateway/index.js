@@ -31,7 +31,7 @@ roles.can('grant'),(req,res)=>{
      *Wanneer dat het geval is mag bijv. de **circuitBreaker.fire()** methode aangeroepen 
      *worden die vervolgens het endpoint aanroept van de microservice.
      *Om de enpoint van de postService microservice aan te roepen, kun je bijv. axios gebruiken
-    */
+    */ 
     res.send('welkom')
   })
 
