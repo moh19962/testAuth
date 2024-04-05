@@ -1,7 +1,10 @@
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
-//connectie opzetten.. En natuurlijk verplaatsen we de string naar de .env
-mongoose.connect('mongodb://localhost:27017/Authenticate');
-
-
-
+// Connectie opzetten met de MongoDB URI uit .env bestand
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB connected..."))
+  .catch((err) => console.log(err));
